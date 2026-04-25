@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-script: var(--font-great-vibes), cursive;
+  --font-dancing: 'Dancing Script', cursive;
+}
+
 /* ── Design Tokens ─────────────────────────────────────── */
 :root {
   /* Sage Palette */
