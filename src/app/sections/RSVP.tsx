@@ -10,6 +10,7 @@ type Status = "idle" | "sending" | "success" | "error";
 
 export default function RSVP() {
   const [status, setStatus] = useState<Status>("idle");
+  const [validationMsg, setValidationMsg] = useState("");
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -33,7 +34,11 @@ export default function RSVP() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (form.events.length === 0) return alert("Please select at least one event.");
+    if (form.events.length === 0) {
+      setValidationMsg("Please select at least one event.");
+      return;
+    }
+    setValidationMsg("");
     setStatus("sending");
 
     try {
@@ -134,6 +139,12 @@ export default function RSVP() {
               placeholder="Send your heartfelt wishes to the couple..."
             />
           </div>
+
+          {validationMsg && (
+            <p style={{ color: "var(--red-envelope)", fontSize: "0.8rem", textAlign: "center", marginBottom: "0.5rem" }}>
+              {validationMsg}
+            </p>
+          )}
 
           <button
             type="submit"
