@@ -1,0 +1,188 @@
+.section {
+  padding: 40px 24px;
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+}
+
+.heading {
+  font-family: var(--font-cormorant);
+  font-size: 48px;
+  font-style: italic;
+  color: var(--sage-primary);
+  margin-top: 8px;
+}
+
+.subtext {
+  font-family: var(--font-cormorant);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.eventStack {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+  max-width: 430px;
+}
+
+.eventGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dayHeader {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.imageCard {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-float);
+  position: relative;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gradientOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+.eventInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  text-align: center;
+  color: white;
+}
+
+.eventTitle {
+  font-family: var(--font-cormorant);
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.infoLine {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 12px auto;
+}
+
+.timeLine {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.themeLine {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.locationCard {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+  margin-top: -20px;
+  width: 90%;
+  z-index: 2;
+  text-align: center;
+}
+
+.locationSubtitle {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.address {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.mapButton {
+  background-color: var(--sage-primary);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(91, 123, 94, 0.2);
+}
+
+.mapPreview {
+  width: 100%;
+  height: 200px;
+  background-color: var(--cream-warm);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapPlaceholder {
+  color: var(--text-muted);
+  font-family: var(--font-inter);
+  font-size: 12px;
+}

@@ -1,0 +1,177 @@
+.section {
+  padding: 40px 24px;
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+}
+
+.heading {
+  font-family: var(--font-cormorant);
+  font-size: 48px;
+  font-style: italic;
+  color: var(--sage-primary);
+  margin-top: 8px;
+}
+
+.subtext {
+  font-family: var(--font-cormorant);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.label {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--cream-dark);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  color: var(--text-primary);
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input::placeholder, .textarea::placeholder {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  border-color: var(--sage-primary);
+  box-shadow: 0 0 0 2px rgba(91, 123, 94, 0.1);
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238B7355' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.checkbox.checked {
+  background-color: var(--sage-primary);
+  border-color: var(--sage-primary);
+  color: white;
+}
+
+.checkboxLabel {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.textarea {
+  min-height: 120px;
+  text-align: left;
+}
+
+.button {
+  width: 100%;
+  background-color: var(--sage-primary);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 16px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.02);
+  background-color: var(--sage-dark);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.successBox {
+  text-align: center;
+  padding: 40px;
+}
+
+.successEmoji {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.successText {
+  font-family: var(--font-cormorant);
+  font-size: 24px;
+  font-style: italic;
+  color: var(--sage-primary);
+}

@@ -1,0 +1,71 @@
+.section {
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--cream);
+}
+
+.inner {
+  text-align: center;
+  width: 100%;
+}
+
+.sectionLabel {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-family: var(--font-cormorant);
+  font-size: 42px;
+  font-style: italic;
+  color: var(--sage-primary);
+  margin-bottom: 16px;
+}
+
+.subtext {
+  font-family: var(--font-cormorant);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.cardsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardLabel {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.revealedText {
+  font-family: var(--font-cormorant);
+  font-size: 24px;
+  color: var(--sage-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}

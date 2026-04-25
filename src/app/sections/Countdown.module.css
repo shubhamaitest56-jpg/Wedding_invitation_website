@@ -1,0 +1,75 @@
+.section {
+  padding: 40px 24px;
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.decorativeLine {
+  width: 60%;
+  height: 1px;
+  background-color: var(--gold);
+  opacity: 0.4;
+  margin: 16px 0;
+}
+
+.introText {
+  font-family: var(--font-cormorant);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 280px;
+}
+
+.weddingLabel {
+  font-family: var(--font-cormorant);
+  font-size: 32px;
+  font-style: italic;
+  color: var(--sage-primary);
+  margin: 8px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number {
+  font-family: var(--font-cormorant);
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
+  display: block;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.label {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-right: -0.2em; /* Compensate for letter spacing to center properly */
+  color: var(--text-muted);
+  text-align: center;
+}

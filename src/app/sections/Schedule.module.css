@@ -1,0 +1,120 @@
+.section {
+  padding: 40px 24px;
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+}
+
+.heading {
+  font-family: var(--font-cormorant);
+  font-size: 36px;
+  font-style: italic;
+  color: var(--sage-primary);
+  margin-top: 8px;
+}
+
+.subtext {
+  font-family: var(--font-cormorant);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.timelineContainer {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  padding-left: 20px;
+}
+
+.rail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--gold);
+  opacity: 0.4;
+}
+
+.progressLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--sage-primary);
+  transform-origin: top;
+}
+
+.eventStack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.dotContainer {
+  position: absolute;
+  left: -28px;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid var(--sage-muted);
+  z-index: 2;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--cream-dark);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  margin-left: 32px;
+}
+
+.time {
+  font-family: var(--font-inter);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.eventTitle {
+  font-family: var(--font-cormorant);
+  font-size: 24px;
+  font-style: italic;
+  color: var(--sage-primary);
+}

@@ -1,0 +1,47 @@
+/* PolaroidFrame.module.css */
+.polaroid {
+  background: #fff;
+  padding: 10px 10px 32px;
+  border-radius: 4px;
+  box-shadow: 0 6px 24px rgba(44, 62, 45, 0.14);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  flex: 0 0 auto;
+  width: min(160px, 42vw);
+  transition: box-shadow 0.3s;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--color-cream);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder {
+  font-size: 2rem;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-sage-light);
+  opacity: 0.6;
+}
+
+.caption {
+  font-family: var(--font-inter);
+  font-size: 0.65rem;
+  text-align: center;
+  color: var(--color-text);
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}

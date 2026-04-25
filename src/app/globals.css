@@ -1,42 +1,96 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ─────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Sage Palette */
+  --sage-primary: #5B7B5E;
+  --sage-light: #7A9E7E;
+  --sage-muted: #9DB5A0;
+  --sage-dark: #4A6B4D;
+
+  /* Cream Palette */
+  --cream: #F5F1E8;
+  --cream-warm: #F0EBE0;
+  --cream-dark: #EDE8D8;
+
+  /* Accent & Status */
+  --gold: #D4A574;
+  --red-envelope: #C41E3A;
+  --red-dark: #B91C32;
+  --wax-cream: #F5E6D3;
+  --wax-gold: #D4A574;
+
+  /* Text */
+  --text-primary: #4A4A4A;
+  --text-secondary: #6B6B6B;
+  --text-muted: #8B7355;
+  --white: #FFFFFF;
+
+  /* Shadow Tokens */
+  --shadow-card: 0 4px 20px rgba(91, 123, 94, 0.08);
+  --shadow-float: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-inner-wax: inset 0 2px 4px rgba(0,0,0,0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ── Base ──────────────────────────────────────────────── */
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-inter), sans-serif;
+  scroll-behavior: smooth;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+* { box-sizing: border-box; }
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-cormorant), serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.font-script {
+  font-family: var(--font-great-vibes), cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.font-accent {
+  font-family: var(--font-inter), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
 }
+
+/* ── Snap container ────────────────────────────────────── */
+/* design.md doesn't explicitly require snap, but mentions it's "nice" */
+.snap-container {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--cream);
+}
+
+/* ── Ambient floating dots (shared helper) ─────────────── */
+.dots-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(91, 123, 94, 0.15);
+  animation: floatDot linear infinite;
+}
+
+@keyframes floatDot {
+  0%   { transform: translateY(0)   scale(1);   opacity: 0.15; }
+  50%  { transform: translateY(-14px) scale(1.2); opacity: 0.35; }
+  100% { transform: translateY(0)   scale(1);   opacity: 0.15; }
+}
+

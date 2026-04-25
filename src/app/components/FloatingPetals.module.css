@@ -1,0 +1,17 @@
+/* FloatingPetals.module.css */
+.container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.petal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform, opacity;
+  user-select: none;
+  line-height: 1;
+}

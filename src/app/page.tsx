@@ -1,95 +1,71 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import { useState } from "react";
+
+import EnvelopeOpen from "./sections/EnvelopeOpen";
+import CoupleIntro from "./sections/CoupleIntro";
+import SaveDate from "./sections/SaveDate";
+import Countdown from "./sections/Countdown";
+import OurStory from "./sections/OurStory";
+import Events from "./sections/Events";
+import Schedule from "./sections/Schedule";
+import RitualExplainer from "./sections/RitualExplainer";
+import RSVP from "./sections/RSVP";
+import Footer from "./sections/Footer";
+import AudioToggle from "./components/AudioToggle";
+import FloatingPetals from "./components/FloatingPetals";
+
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [revealed, setRevealed] = useState(false);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <>
+      <AnimatePresence>
+        {/* High-end 3D Envelope Entry */}
+        {!revealed && (
+          <motion.div
+            key="envelope"
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className="fixed inset-0 z-[9999]"
           >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
+            <EnvelopeOpen onReveal={() => setRevealed(true)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main website content — revealed after envelope animation */}
+      <AnimatePresence>
+        {revealed && (
+          <motion.main 
+            key="main"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="snap-container" 
+            id="main-content"
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <CoupleIntro />
+            <SaveDate />
+            <Countdown />
+            <OurStory />
+            <RitualExplainer />
+            <Events />
+            <Schedule />
+            <RSVP />
+            <Footer />
+
+            {/* Ambient petal layer */}
+            <FloatingPetals count={14} />
+          </motion.main>
+        )}
+      </AnimatePresence>
+
+      {/* Fixed UI elements */}
+      <AudioToggle />
+    </>
   );
 }
+
